@@ -6,64 +6,248 @@
 
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:background="#66FF99"
         android:layout_alignParentEnd="true"
-        android:id="@+id/relativeLayout">
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#66FF99">
 
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Marketing Assistant - Athens"
             android:id="@+id/textView"
-            android:layout_marginLeft="28dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginStart="28dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="ALEXANDER MOORE"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="28dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="28dp"
+            android:text="Marketing Assistant - Athens"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
             android:id="@+id/textView2"
-            android:layout_below="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/textView"
-            android:layout_alignStart="@+id/textView" />
+            android:layout_alignStart="@+id/textView"
+            android:layout_below="@+id/textView"
+            android:text="ALEXANDER MOORE"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
     </RelativeLayout>
 
 
     <RelativeLayout
-        android:background="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/relativeLayout"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout"
+        android:background="@color/white">
 
         <android.support.v7.widget.CardView
-            android:layout_marginLeft="18dp"
-            android:layout_marginRight="18dp"
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view"
-            android:layout_gravity="center"
+            android:id="@+id/description_card_view"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            card_view:cardCornerRadius="4dp">
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/advert_card_margin"
+            android:layout_marginTop="@dimen/advert_card_margin"
+            android:layout_marginRight="@dimen/advert_card_margin"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardBackgroundColor="@color/white">
 
-            <TextView
-                android:text="Περιγραφή\n"
-                android:id="@+id/info_text"
+            <RelativeLayout
+                android:padding="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000"
+                    android:id="@+id/description_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="Περιγραφή" />
+
+                <TextView
+                    android:layout_marginTop="18dp"
+                    android:id="@+id/description_text"
+                    android:layout_below="@+id/description_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:text="Η ALEXANDER MOORE επιθυμεί να προσλάβει άτομα για την υποστήριξη σε Marketing projects και Διαχείριση Σχέσεων με Πελάτες (CRM).
+Θα αξιολογηθεί θετικά η προϋπηρεσία σε σχετική θέση. Μερική απασχόληση με ικανοποιητικές αποδοχές και προοπτικές εξέλιξης. Αποστείλατε CV: hr@alexandermoore.com με την ένδειξη CRM/05/15."
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_below="@+id/description_card_view"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/location_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/advert_card_margin"
+            android:layout_marginTop="@dimen/advert_card_margin"
+            android:layout_marginRight="@dimen/advert_card_margin"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardBackgroundColor="@color/white">
+
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000"
+                    android:id="@+id/location_title"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:text="Τοποθεσία:"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/location_text"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:text="Αθήνα"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/location_title"
+                    android:layout_toEndOf="@+id/location_title" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_below="@+id/location_card_view"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/employment_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/advert_card_margin"
+            android:layout_marginTop="@dimen/advert_card_margin"
+            android:layout_marginRight="@dimen/advert_card_margin"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardBackgroundColor="@color/white">
+
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000"
+                    android:id="@+id/employment_title"
+                    android:layout_width="180dp"
+                    android:layout_height="20dp"
+                    android:text="Τύπος Απασχόλησης:"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/employment_text"
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:text="Μερική"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/employment_title"
+                    android:layout_toEndOf="@+id/employment_title" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_below="@+id/employment_card_view"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/specialty_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/advert_card_margin"
+            android:layout_marginTop="@dimen/advert_card_margin"
+            android:layout_marginRight="@dimen/advert_card_margin"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardBackgroundColor="@color/white">
+
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000"
+                    android:id="@+id/specialty_title"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:text="Ειδικότητα:"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/specialty_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="Τμήμα Marketing"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/specialty_title"
+                    android:layout_toEndOf="@+id/specialty_title" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_below="@+id/specialty_card_view"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/contact_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/advert_card_margin"
+            android:layout_marginTop="@dimen/advert_card_margin"
+            android:layout_marginRight="@dimen/advert_card_margin"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardBackgroundColor="@color/white">
+
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000"
+                    android:id="@+id/contact_title"
+                    android:layout_width="110dp"
+                    android:layout_height="20dp"
+                    android:text="Επικοινωνία:"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/contact_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="hr@alexandermoore.com"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/contact_title"
+                    android:layout_toEndOf="@+id/contact_title" />
+            </RelativeLayout>
         </android.support.v7.widget.CardView>
     </RelativeLayout>
-
 
 </RelativeLayout>
