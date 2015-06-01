@@ -16,6 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Advert"
+            android:label="@string/title_activity_advert"></activity>
+        <activity
+            android:name=".AllAds"
+            android:label="@string/title_activity_all_ads"></activity>
     </application>
 
 </manifest>
