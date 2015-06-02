@@ -1,9 +1,14 @@
 package gr.aegeanhawks.greekjobs;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.util.ArrayList;
 
 
 public class AllAds extends ActionBarActivity {
@@ -12,6 +17,21 @@ public class AllAds extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_ads);
+
+        //Get info from previews activity
+        Intent intent = getIntent();
+        ArrayList<Ads> ads = (ArrayList<Ads>) intent.getSerializableExtra("resList");
+
+        //Build RecyclerView
+        RecyclerView recList = (RecyclerView) findViewById(R.id.cardList);
+        recList.setHasFixedSize(true);
+        //layout
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        recList.setLayoutManager(llm);
+
+        AdvertAdapter ca = new AdvertAdapter(ads);
+        recList.setAdapter(ca);
     }
 
     @Override

@@ -107,7 +107,7 @@ public class MainActivity extends ActionBarActivity {
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         // Add new Flag to start new Activity
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(i); //Στην onCreate της MainActivity κάνω retrieve το object Icarus - φτιάξε τα υπόλοιπα, δες τι έκανε και ο Χάρης
+        startActivity(i);
         MainActivity.this.finish();
 
     }
