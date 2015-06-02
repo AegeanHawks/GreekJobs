@@ -7,9 +7,9 @@ import java.io.Serializable;
  */
 public class Ads implements Serializable {
     private String Title, Area, Company, Specialty, Contact, Description;
-    private Integer Type;
+    private Integer Type,Id;
 
-    public Ads(String Title, String Area, String Company, Integer Type, String Specialty, String Contact, String Description) {
+    public Ads(String Title, String Area, String Company, Integer Type, String Specialty, String Contact, String Description, int Id) {
         this.Title = Title;
         this.Area = Area;
         this.Company = Company;
@@ -17,6 +17,7 @@ public class Ads implements Serializable {
         this.Specialty = Specialty;
         this.Contact = Contact;
         this.Description = Description;
+        this.Id = Id;
     }
 
     public String getTitle() {
@@ -45,6 +46,10 @@ public class Ads implements Serializable {
 
     public String getDescription() {
         return Description;
+    }
+
+    public int getID() {
+        return Id;
     }
 
     public String toString() {

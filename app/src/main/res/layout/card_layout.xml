@@ -12,6 +12,17 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/advertId"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/ripple_material_dark"
+            android:gravity="center_vertical"
+            android:text="contact det"
+            android:textColor="@android:color/white"
+            android:textSize="14dp" />
+
+        <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="20dp"

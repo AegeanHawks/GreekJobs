@@ -7,4 +7,6 @@
     <string name="search_nothing">Δεν βρέθηκε τίποτα</string>
     <string name="search_empty">Εισάγετε κάτι...</string>
     <string name="fieldsearch">Ψάχνω για...</string>
+    <string name="employment_full">Πλήρης</string>
+    <string name="employment_partial">Μερική</string>
 </resources>

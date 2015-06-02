@@ -16,7 +16,7 @@
 
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/JobTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -28,12 +28,12 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/CompanySubtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/textView"
-            android:layout_alignStart="@+id/textView"
-            android:layout_below="@+id/textView"
+            android:layout_alignLeft="@+id/JobTitle"
+            android:layout_alignStart="@+id/JobTitle"
+            android:layout_below="@+id/JobTitle"
             android:text="ALEXANDER MOORE"
             android:textAppearance="?android:attr/textAppearanceMedium" />
     </RelativeLayout>

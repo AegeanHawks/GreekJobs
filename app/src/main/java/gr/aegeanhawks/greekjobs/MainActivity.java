@@ -55,11 +55,11 @@ public class MainActivity extends ActionBarActivity {
 
         //Check nothing set to be searched
         if (searchfield.isEmpty()) {
-            Toast.makeText(getApplicationContext(), R.string.search_nothing, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.search_empty, Toast.LENGTH_SHORT).show();
             return;
         }
 
-        //Search in database
+        //Open database
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
         //Execute Query for searching into database
@@ -68,7 +68,7 @@ public class MainActivity extends ActionBarActivity {
 
         //Check if there are no results
         if (resultSet.getCount() == 0) {
-            Toast.makeText(getApplicationContext(), R.string.search_empty, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.search_nothing, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -92,13 +92,16 @@ public class MainActivity extends ActionBarActivity {
                         .getColumnIndex("Type")));
                 String Contact = resultSet.getString(resultSet
                         .getColumnIndex("Contact"));
+                int Id = resultSet.getInt(resultSet
+                        .getColumnIndex("ID"));
                 //Add the adevert to our list
-                resList.add(new Ads(Title, Area, Company, Type, Specialty, Contact, Description)); //Eisagvsgh se lista h kateu8eia ektupwsh
+                resList.add(new Ads(Title, Area, Company, Type, Specialty, Contact, Description, Id)); //Eisagvsgh se lista h kateu8eia ektupwsh
                 resultSet.moveToNext();
             }
         }
 
         Log.v("DATABASE_RESULT", resList.toString());
+        db.close();
 
         Intent i = new Intent(MainActivity.this, AllAds.class);
         i.putExtra("resList", resList);
@@ -108,7 +111,7 @@ public class MainActivity extends ActionBarActivity {
         // Add new Flag to start new Activity
         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
-        MainActivity.this.finish();
+        //MainActivity.this.finish();
 
     }
 }
