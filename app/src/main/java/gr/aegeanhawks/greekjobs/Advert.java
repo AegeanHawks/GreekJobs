@@ -3,10 +3,12 @@ package gr.aegeanhawks.greekjobs;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,7 +23,7 @@ public class Advert extends ActionBarActivity {
 
         //Get info from previews activity
         Intent intent = getIntent();
-        int advertID= intent.getIntExtra("id",-1);//Check if there are no results
+        int advertID = intent.getIntExtra("id", -1);//Check if there are no results
 
 
         //Load Database from resources
@@ -31,7 +33,7 @@ public class Advert extends ActionBarActivity {
 
 
         //Execute Query for searching into database
-        String Query = "SELECT * FROM Advert WHERE ID='"+advertID+"'";
+        String Query = "SELECT * FROM Advert WHERE ID='" + advertID + "'";
         Cursor resultSet = db.rawQuery(Query, null);
 
         //Check if there are no results
@@ -65,7 +67,7 @@ public class Advert extends ActionBarActivity {
         TextView txtSpecialty = (TextView) this.findViewById(R.id.specialty_text);
         TextView txtCompany = (TextView) this.findViewById(R.id.CompanySubtitle);
         TextView txtType = (TextView) this.findViewById(R.id.employment_text);
-        TextView txtContact = (TextView) this.findViewById(R.id.contact_text);
+        final TextView txtContact = (TextView) this.findViewById(R.id.contact_text);
 
         //Set text to text fields
         txtTitle.setText(Title);
@@ -73,12 +75,20 @@ public class Advert extends ActionBarActivity {
         txtArea.setText(Area);
         txtSpecialty.setText(Specialty);
         txtCompany.setText(Company);
-        if(Type==0){
+        if (Type == 0) {
             txtType.setText(R.string.employment_partial);
-        } else if( Type==1){
+        } else if (Type == 1) {
             txtType.setText(R.string.employment_full);
         }
         txtContact.setText(Contact);
+        txtContact.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + txtContact.getText().toString().replaceAll("[^0-9|\\+]", "")));
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
