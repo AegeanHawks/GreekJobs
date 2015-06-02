@@ -47,205 +47,205 @@
         android:layout_below="@+id/relativeLayout"
         android:background="@color/white">
 
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/description_card_view"
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/advert_card_margin"
-            android:layout_marginTop="@dimen/advert_card_margin"
             android:layout_marginRight="@dimen/advert_card_margin"
-            card_view:cardCornerRadius="10dp"
-            card_view:cardBackgroundColor="@color/white">
+            android:layout_marginTop="@dimen/advert_card_margin"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardCornerRadius="10dp">
 
             <RelativeLayout
-                android:padding="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:padding="10dp">
 
                 <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#000000"
                     android:id="@+id/description_title"
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
-                    android:text="Περιγραφή" />
+                    android:text="Περιγραφή"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:layout_marginTop="18dp"
                     android:id="@+id/description_text"
-                    android:layout_below="@+id/description_title"
                     android:layout_width="match_parent"
                     android:layout_height="140dp"
-                    android:text="Η ALEXANDER MOORE επιθυμεί να προσλάβει άτομα για την υποστήριξη σε Marketing projects και Διαχείριση Σχέσεων με Πελάτες (CRM).
-Θα αξιολογηθεί θετικά η προϋπηρεσία σε σχετική θέση. Μερική απασχόληση με ικανοποιητικές αποδοχές και προοπτικές εξέλιξης. Αποστείλατε CV: hr@alexandermoore.com με την ένδειξη CRM/05/15."
-                    android:layout_centerVertical="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/description_title"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="18dp"
+                    android:text="Η ALEXANDER MOORE επιθυμεί να προσλάβει άτομα για την υποστήριξη σε Marketing projects και Διαχείριση Σχέσεων με Πελάτες (CRM).
+Θα αξιολογηθεί θετικά η προϋπηρεσία σε σχετική θέση. Μερική απασχόληση με ικανοποιητικές αποδοχές και προοπτικές εξέλιξης. Αποστείλατε CV: hr@alexandermoore.com με την ένδειξη CRM/05/15." />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:layout_below="@+id/description_card_view"
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/location_card_view"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:layout_below="@+id/description_card_view"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/advert_card_margin"
-            android:layout_marginTop="@dimen/advert_card_margin"
             android:layout_marginRight="@dimen/advert_card_margin"
-            card_view:cardCornerRadius="10dp"
-            card_view:cardBackgroundColor="@color/white">
+            android:layout_marginTop="@dimen/advert_card_margin"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardCornerRadius="10dp">
 
             <RelativeLayout
-                android:padding="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:padding="10dp">
 
                 <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#000000"
                     android:id="@+id/location_title"
                     android:layout_width="100dp"
                     android:layout_height="20dp"
-                    android:text="Τοποθεσία:"
-                    android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Τοποθεσία:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:layout_marginTop="4dp"
                     android:id="@+id/location_text"
                     android:layout_width="200dp"
                     android:layout_height="20dp"
-                    android:text="Αθήνα"
                     android:layout_alignParentBottom="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_toEndOf="@+id/location_title"
                     android:layout_toRightOf="@+id/location_title"
-                    android:layout_toEndOf="@+id/location_title" />
+                    android:text="Αθήνα" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:layout_below="@+id/location_card_view"
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/employment_card_view"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:layout_below="@+id/location_card_view"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/advert_card_margin"
-            android:layout_marginTop="@dimen/advert_card_margin"
             android:layout_marginRight="@dimen/advert_card_margin"
-            card_view:cardCornerRadius="10dp"
-            card_view:cardBackgroundColor="@color/white">
+            android:layout_marginTop="@dimen/advert_card_margin"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardCornerRadius="10dp">
 
             <RelativeLayout
-                android:padding="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:padding="10dp">
 
                 <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#000000"
                     android:id="@+id/employment_title"
                     android:layout_width="180dp"
                     android:layout_height="20dp"
-                    android:text="Τύπος Απασχόλησης:"
-                    android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Τύπος Απασχόλησης:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:layout_marginTop="4dp"
                     android:id="@+id/employment_text"
                     android:layout_width="200dp"
                     android:layout_height="20dp"
-                    android:text="Μερική"
                     android:layout_alignParentBottom="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_toEndOf="@+id/employment_title"
                     android:layout_toRightOf="@+id/employment_title"
-                    android:layout_toEndOf="@+id/employment_title" />
+                    android:text="Μερική" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:layout_below="@+id/employment_card_view"
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/specialty_card_view"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:layout_below="@+id/employment_card_view"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/advert_card_margin"
-            android:layout_marginTop="@dimen/advert_card_margin"
             android:layout_marginRight="@dimen/advert_card_margin"
-            card_view:cardCornerRadius="10dp"
-            card_view:cardBackgroundColor="@color/white">
+            android:layout_marginTop="@dimen/advert_card_margin"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardCornerRadius="10dp">
 
             <RelativeLayout
-                android:padding="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:padding="10dp">
 
                 <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#000000"
                     android:id="@+id/specialty_title"
                     android:layout_width="100dp"
                     android:layout_height="20dp"
-                    android:text="Ειδικότητα:"
-                    android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Ειδικότητα:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:layout_marginTop="4dp"
                     android:id="@+id/specialty_text"
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
-                    android:text="Τμήμα Marketing"
                     android:layout_alignParentBottom="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_toEndOf="@+id/specialty_title"
                     android:layout_toRightOf="@+id/specialty_title"
-                    android:layout_toEndOf="@+id/specialty_title" />
+                    android:text="Τμήμα Marketing" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
+
         <android.support.v7.widget.CardView
-            android:layout_below="@+id/specialty_card_view"
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/contact_card_view"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:layout_below="@+id/specialty_card_view"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/advert_card_margin"
-            android:layout_marginTop="@dimen/advert_card_margin"
             android:layout_marginRight="@dimen/advert_card_margin"
-            card_view:cardCornerRadius="10dp"
-            card_view:cardBackgroundColor="@color/white">
+            android:layout_marginTop="@dimen/advert_card_margin"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardCornerRadius="10dp">
 
             <RelativeLayout
-                android:padding="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:padding="10dp">
 
                 <TextView
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#000000"
                     android:id="@+id/contact_title"
                     android:layout_width="110dp"
                     android:layout_height="20dp"
-                    android:text="Επικοινωνία:"
-                    android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Επικοινωνία:"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" />
 
                 <TextView
-                    android:layout_marginTop="4dp"
                     android:id="@+id/contact_text"
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
-                    android:text="hr@alexandermoore.com"
                     android:layout_alignParentBottom="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_toEndOf="@+id/contact_title"
                     android:layout_toRightOf="@+id/contact_title"
-                    android:layout_toEndOf="@+id/contact_title" />
+                    android:text="hr@alexandermoore.com" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
     </RelativeLayout>

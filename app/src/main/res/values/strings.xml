@@ -2,6 +2,9 @@
     <string name="app_name">GreekJobs</string>
 
     <string name="action_search">Search</string>
+    <string name="fieldsearch">Looking for...</string>
     <string name="title_activity_advert">Job</string>
     <string name="title_activity_all_ads">Results</string>
+    <string name="search_empty">Please fill in search...</string>
+    <string name="search_nothing">Nothing found!</string>
 </resources>

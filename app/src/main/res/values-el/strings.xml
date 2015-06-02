@@ -4,4 +4,7 @@
     <string name="action_search">Αναζήτηση</string>
     <string name="title_activity_advert">Εργασία</string>
     <string name="title_activity_all_ads">Αποτελέσματα</string>
+    <string name="search_nothing">Δεν βρέθηκε τίποτα</string>
+    <string name="search_empty">Εισάγετε κάτι...</string>
+    <string name="fieldsearch">Ψάχνω για...</string>
 </resources>
