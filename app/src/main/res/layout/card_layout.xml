@@ -4,76 +4,87 @@
     android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="5dp"
+    android:layout_marginBottom="10dp"
     card_view:cardCornerRadius="4dp">
+
+    <TextView
+        android:id="@+id/advertId"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/ripple_material_dark"
+        android:gravity="center_vertical"
+        android:text="contact det"
+        android:textSize="14dp"
+        android:visibility="invisible" />
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/advertId"
-            android:visibility="invisible"
+        <LinearLayout
+            android:paddingLeft="5dp"
+            android:id="@+id/lyt_specialty"
             android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:background="@color/ripple_material_dark"
-            android:gravity="center_vertical"
-            android:text="contact det"
-            android:textColor="@android:color/white"
-            android:textSize="14dp" />
+            android:layout_height="22dp"
+            android:background="@color/card_advert_title">
+
+            <TextView
+                android:id="@+id/specialty"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text="Τίτλος αγγελίας"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+
+    <RelativeLayout
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/lyt_specialty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:background="@color/ripple_material_dark"
-            android:gravity="center_vertical"
-            android:text="contact det"
-            android:textColor="@android:color/white"
-            android:textSize="14dp" />
-
-        <TextView
-            android:id="@+id/txtName"
+            android:id="@+id/txtTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/title"
-            android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
             android:gravity="center_vertical"
-            android:text="Name"
+            android:text="Θέση εργασίας"
             android:textSize="10dp" />
 
         <TextView
-            android:id="@+id/txtSurname"
+            android:id="@+id/txtCompany"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/txtName"
-            android:layout_marginLeft="5dp"
+            android:layout_below="@id/txtTitle"
             android:layout_marginTop="10dp"
             android:gravity="center_vertical"
-            android:text="Surname"
+            android:text="Εταιρία"
             android:textSize="10dp" />
 
         <TextView
-            android:id="@+id/txtEmail"
+            android:id="@+id/txtArea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/txtName"
+            android:layout_alignBaseline="@id/txtTitle"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="150dp"
+            android:layout_marginRight="40dp"
             android:layout_marginTop="10dp"
-            android:text="Email"
+            android:text="Περιοχή"
             android:textSize="10dp" />
 
         <TextView
-            android:id="@+id/txtAdd"
+            android:id="@+id/txtAddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/txtSurname"
-            android:layout_alignStart="@id/txtEmail"
-            android:text="Address"
+            android:layout_alignBaseline="@id/txtCompany"
+            android:layout_alignStart="@id/txtArea"
+            android:text="Διεύθυνση"
             android:textSize="10dp" />
 
+    </RelativeLayout>
     </RelativeLayout>
 
 

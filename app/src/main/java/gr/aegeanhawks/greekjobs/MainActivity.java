@@ -105,6 +105,7 @@ public class MainActivity extends ActionBarActivity {
 
         Intent i = new Intent(MainActivity.this, AllAds.class);
         i.putExtra("resList", resList);
+        i.putExtra("keyword", searchfield);
 
         // Closing all the Activities
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

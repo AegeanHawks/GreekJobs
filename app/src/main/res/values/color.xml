@@ -2,4 +2,8 @@
 <resources>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
+    <color name="orange">#FF6600</color>
+    <color name="cyan">#99CCFF</color>
+    <color name="card_advert_title">#99FF33</color>
+    <color name="green_light">#66FF99</color>
 </resources>

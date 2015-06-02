@@ -10,8 +10,6 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-
 
 public class Advert extends ActionBarActivity {
     private DBHelper dbHelper;
@@ -61,7 +59,7 @@ public class Advert extends ActionBarActivity {
                 .getColumnIndex("Contact"));
 
         //Initialize text fields variables
-        TextView txtTitle = (TextView) this.findViewById(R.id.JobTitle);
+        TextView txtTitle = (TextView) this.findViewById(R.id.txt_results_bar);
         TextView txtDescription = (TextView) this.findViewById(R.id.description_text);
         TextView txtArea = (TextView) this.findViewById(R.id.location_text);
         TextView txtSpecialty = (TextView) this.findViewById(R.id.specialty_text);

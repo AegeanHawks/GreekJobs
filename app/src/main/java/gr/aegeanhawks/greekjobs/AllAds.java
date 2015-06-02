@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -21,6 +22,9 @@ public class AllAds extends ActionBarActivity {
         //Get info from previews activity
         Intent intent = getIntent();
         ArrayList<Ads> ads = (ArrayList<Ads>) intent.getSerializableExtra("resList");
+
+        TextView txtKeyword = (TextView) this.findViewById(R.id.txtKeyword);
+        txtKeyword.setText((String)intent.getSerializableExtra("keyword"));
 
         //Build RecyclerView
         RecyclerView recList = (RecyclerView) findViewById(R.id.cardList);

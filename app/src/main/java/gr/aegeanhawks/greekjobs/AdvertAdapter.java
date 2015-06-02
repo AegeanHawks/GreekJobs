@@ -23,9 +23,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,9 +46,9 @@ public class AdvertAdapter extends RecyclerView.Adapter<AdvertAdapter.AdvertView
         Ads ad = AdsList.get(i);
 
         contactViewHolder.vName.setText(ad.getTitle());
-        contactViewHolder.vSurname.setText(ad.getCompany());
-        contactViewHolder.vEmail.setText(ad.getArea());
-        contactViewHolder.vTitle.setText(ad.getContact() + " " + ad.getSpecialty());
+        contactViewHolder.vCompany.setText(ad.getCompany());
+        contactViewHolder.vArea.setText(ad.getArea());
+        contactViewHolder.vTitle.setText(ad.getSpecialty());
         contactViewHolder.advertId.setText(String.valueOf(ad.getID()));
 
         contactViewHolder.cView.setClickable(true);
@@ -86,8 +83,8 @@ public class AdvertAdapter extends RecyclerView.Adapter<AdvertAdapter.AdvertView
     public static class AdvertViewHolder extends RecyclerView.ViewHolder {
 
         protected TextView vName;
-        protected TextView vSurname;
-        protected TextView vEmail;
+        protected TextView vCompany;
+        protected TextView vArea;
         protected TextView vTitle;
         protected TextView advertId;
         protected CardView cView;
@@ -96,10 +93,10 @@ public class AdvertAdapter extends RecyclerView.Adapter<AdvertAdapter.AdvertView
             super(v);
 
             cView = (CardView) v.findViewById(R.id.card_view);
-            vName = (TextView) v.findViewById(R.id.txtName);
-            vSurname = (TextView) v.findViewById(R.id.txtSurname);
-            vEmail = (TextView) v.findViewById(R.id.txtEmail);
-            vTitle = (TextView) v.findViewById(R.id.title);
+            vName = (TextView) v.findViewById(R.id.txtTitle);
+            vCompany = (TextView) v.findViewById(R.id.txtCompany);
+            vArea = (TextView) v.findViewById(R.id.txtArea);
+            vTitle = (TextView) v.findViewById(R.id.specialty);
             advertId = (TextView) v.findViewById(R.id.advertId);
         }
     }
