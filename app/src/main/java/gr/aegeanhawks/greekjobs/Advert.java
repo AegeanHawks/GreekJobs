@@ -95,7 +95,7 @@ public class Advert extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-                        Uri.parse("google.maps:q=" + txtArea.getText().toString()));
+                        Uri.parse("http://maps.google.com/maps?q=" + txtArea.getText().toString()));
                 startActivity(intent);
             }
         });
