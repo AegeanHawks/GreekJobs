@@ -71,7 +71,7 @@ public class Advert extends ActionBarActivity {
 
         //Set text to text fields
         txtTitle.setText(Title);
-        txtDescription.setText(Description);
+        txtDescription.setText(Description.replace("\\n", "\n"));
         txtArea.setText(Area);
         txtSpecialty.setText(Specialty);
         txtCompany.setText(Company);
