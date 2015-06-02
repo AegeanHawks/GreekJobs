@@ -62,10 +62,6 @@ public class AdvertAdapter extends RecyclerView.Adapter<AdvertAdapter.AdvertView
                 int advertId = Integer.parseInt(txtadvertID.getText().toString());
                 i.putExtra("id", advertId);
 
-                // Closing all the Activities
-                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                // Add new Flag to start new Activity
-                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 v.getContext().startActivity(i);
             }
         });

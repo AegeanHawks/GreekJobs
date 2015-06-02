@@ -103,20 +103,11 @@ public class MainActivity extends ActionBarActivity {
             }
         }
 
-        //Log.v("DATABASE_RESULT", resList.toString());
-        //db.close();
-
         Intent i = new Intent(MainActivity.this, AllAds.class);
         i.putExtra("resList", resList);
         i.putExtra("keyword", searchfield.replace("%%", " "));
 
-        // Closing all the Activities
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        // Add new Flag to start new Activity
-        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(i);
-        //MainActivity.this.finish();
-
     }
 
     private void hideKeyboard() {
