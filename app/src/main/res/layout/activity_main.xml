@@ -17,7 +17,10 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/view"
         android:layout_centerHorizontal="true"
-        android:hint="@string/action_search" />
+        android:hint="@string/action_search"
+        android:imeActionId="@+id/view"
+        android:imeOptions="actionDone"
+        android:singleLine="true" />
 
     <mehdi.sakout.fancybuttons.FancyButton
         android:id="@+id/view"

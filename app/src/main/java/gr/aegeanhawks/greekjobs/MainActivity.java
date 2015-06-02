@@ -1,14 +1,15 @@
 package gr.aegeanhawks.greekjobs;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -50,8 +51,10 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void Search_Clicked(View v) {
+        hideKeyboard();
+
         //Get Search text
-        String searchfield = ((EditText) findViewById(R.id.searchfield)).getText().toString();
+        String searchfield = ((EditText) findViewById(R.id.searchfield)).getText().toString().replace(" ", "%%");
 
         //Check nothing set to be searched
         if (searchfield.isEmpty()) {
@@ -100,12 +103,12 @@ public class MainActivity extends ActionBarActivity {
             }
         }
 
-        Log.v("DATABASE_RESULT", resList.toString());
-        db.close();
+        //Log.v("DATABASE_RESULT", resList.toString());
+        //db.close();
 
         Intent i = new Intent(MainActivity.this, AllAds.class);
         i.putExtra("resList", resList);
-        i.putExtra("keyword", searchfield);
+        i.putExtra("keyword", searchfield.replace("%%", " "));
 
         // Closing all the Activities
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -115,4 +118,14 @@ public class MainActivity extends ActionBarActivity {
         //MainActivity.this.finish();
 
     }
+
+    private void hideKeyboard() {
+        // Check if no view has focus:
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager inputManager = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
+            inputManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        }
+    }
+
 }
