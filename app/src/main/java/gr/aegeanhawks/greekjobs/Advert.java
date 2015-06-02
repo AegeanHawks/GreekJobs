@@ -63,9 +63,9 @@ public class Advert extends ActionBarActivity {
         //Initialize text fields variables
         TextView txtTitle = (TextView) this.findViewById(R.id.txt_results_bar);
         TextView txtDescription = (TextView) this.findViewById(R.id.description_text);
-        TextView txtArea = (TextView) this.findViewById(R.id.location_text);
+        final TextView txtArea = (TextView) this.findViewById(R.id.location_text);
         TextView txtSpecialty = (TextView) this.findViewById(R.id.specialty_text);
-        TextView txtCompany = (TextView) this.findViewById(R.id.CompanySubtitle);
+        final TextView txtCompany = (TextView) this.findViewById(R.id.CompanySubtitle);
         TextView txtType = (TextView) this.findViewById(R.id.employment_text);
         final TextView txtContact = (TextView) this.findViewById(R.id.contact_text);
 
@@ -86,6 +86,26 @@ public class Advert extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + txtContact.getText().toString().replaceAll("[^0-9|\\+]", "")));
+                startActivity(intent);
+            }
+        });
+
+        txtArea.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                        Uri.parse("google.maps:q=" + txtArea.getText().toString()));
+                startActivity(intent);
+            }
+        });
+
+        txtCompany.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("http://www.google.com/#q=" + txtCompany.getText().toString().replace(" ", "+"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
         });
