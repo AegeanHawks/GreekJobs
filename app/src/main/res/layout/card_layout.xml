@@ -23,11 +23,11 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:paddingLeft="5dp"
             android:id="@+id/lyt_specialty"
             android:layout_width="match_parent"
             android:layout_height="22dp"
-            android:background="@color/card_advert_title">
+            android:background="@color/card_advert_title"
+            android:paddingLeft="5dp">
 
             <TextView
                 android:id="@+id/specialty"
@@ -40,10 +40,10 @@
 
 
     <RelativeLayout
-        android:paddingLeft="5dp"
-        android:layout_below="@+id/lyt_specialty"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lyt_specialty"
+        android:paddingLeft="5dp">
 
         <TextView
             android:id="@+id/txtTitle"
@@ -73,15 +73,6 @@
             android:layout_marginRight="40dp"
             android:layout_marginTop="10dp"
             android:text="Περιοχή"
-            android:textSize="10dp" />
-
-        <TextView
-            android:id="@+id/txtAddress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/txtCompany"
-            android:layout_alignStart="@id/txtArea"
-            android:text="Διεύθυνση"
             android:textSize="10dp" />
 
     </RelativeLayout>
